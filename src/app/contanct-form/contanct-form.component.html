@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <form id="contact-form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstnameInput">First name</label>
+            <input type="text" class="form-control" id="firstnameInput" formControlName="firstname" placeholder="Alex">
+        </div>
+        <div class="form-group mt-3">
+            <label for="surnameInput">Surname</label>
+            <input type="text" class="form-control" id="surnameInput" formControlName="surname" placeholder="Ivanov">
+        </div>
+        <div class="form-group mt-3">
+            <label for="birthInput">Date of Birth</label>
+            <input type="date" class="form-control" id="birthInput" formControlName="dateofbirth">
+        </div>
+        <div class="form-group mt-3">
+            <label for="notesInput">Notes</label>
+            <input type="text" class="form-control" id="notesInput" formControlName="notes" placeholder="Something about you">
+        </div>
+
+        <button class="btn btn-primary mt-5" type="submit" [disabled]="userForm.invalid">Send form</button>
+        
+    </form>
+</div>

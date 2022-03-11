@@ -1,0 +1,13 @@
+<div class="container d-flex flex-column pt-3">
+    <button class="btn btn-primary ms-auto" [routerLink]="['form']">+ Add user</button>
+    <div class="d-flex flex-column mt-5">
+        <div class="d-flex flex-column pb-4" *ngFor="let user of users | async">
+            <div class="fs-3">
+                {{user.firstname}} {{user.surname}}
+            </div>
+            <div class="fs-5">
+                {{user.dateofbirth}}
+            </div>
+        </div>
+    </div>
+</div>
